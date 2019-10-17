@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<script>
+function checkvalue(val)
+{
+    if(val==="OTHERS")
+       document.getElementById('languagebox').style.display='block';
+    else
+       document.getElementById('languagebox').style.display='none'; 
+}
+
+</script>
+<style>
+@font-face{
+            font-family:BrandonText-Regular;
+			src: url("BrandonText-Regular.otf");
+		}
+@font-face{
+            font-family:BrandonText-Medium;
+			src: url("BrandonText-Medium.otf");
+		}
+@font-face{
+            font-family:BrandonText-Bold;
+			src: url("BrandonText-Bold.otf");
+		}
+@font-face{
+            font-family:HelveticaNeue-Light;
+			src: url("HelveticaNeue-Light.ttf");
+		}
+@font-face{
+            font-family:Arial;
+			src: url("Arial.ttf");
+         }	 
+
+#mmm{
+       margin-left:10%;
+	   margin-top:1.5%;
+	 }
+	
+
+.search-container {
+     width:40%;
+	 
+	 margin-top:10%;
+     margin-left:27%;
+	 background: #ddd;
+	 
+	
+	 padding-top: 0.5%;
+	 padding-left: 0.2%;
+	 padding-bottom: 0.5%;
+	 padding-right: 0.5%;
+	 }
+.search-container input{
+     width:100%;
+	 }
+
+.search-container button {
+  float: center;
+  padding: 1% 1%;
+ 
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: #ccc;
+ }
+ 
+ #selectmood{
+               margin-left:28%;
+               margin-top:1%;
+			}
+			
+#language{
+            margin-left: 5%;
+         }
+		 
+#submit{
+         margin-left:39%;
+         margin-top:2%;
+		}
+		
+#lastdiv{
+           margin-top:15%;
+		 }
+		
+ ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {
+      
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    font-size: 100%;
+    text-decoration: none;	
+    text-underline-position: under;
+}  
+  ul li a {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.2s;
+}
+ul li:hover a{
+  transform: scale(1.2);
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+#languagebox{
+       margin-left:43.5%;
+	   }
+</style>
+</head>
+<title>MUSIC MAKES MOOD
+</title>
+<body>
+<div><img id="mmm" src="mmm.png" height="10%" width="80%" title="MUSIC MAKES MOOD"></img>
+
+<div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="WHAT'S YOUR MOOD?" name="search"><br/>
+
+    </form>
+</div>
+<div id="selectmood">
+	  <span id="typeofmood">TYPE OF MOOD 
+	  <select name="SELECT" required>
+	    <option value="">SELECT</option>
+	    <option value="sad">SAD</option>
+		<option value="happy">HAPPY</option>
+		<option value="party">PARTY</option>
+		<option value="depressed">DEPRESSED</option>
+	  </select>
+	 </span>
+	 
+	  <span id="language">PREFERRED LANGUAGE
+	  <select name="SELECT" onchange='checkvalue(this.value)' required>
+	    <option value="english">ENGLISH</option>
+	    <option value="hindi">HINDI</option>
+		<option value="spanish">SPANISH</option>
+		<option value="roman">ROMAN</option>
+		<option value="OTHERS">OTHERS</option>
+	  </select>
+	  <input type="text" name="language" placeholder="ENTER LANGUAGE" id="languagebox" style='display:none'/>
+	 </span>
+
+</div>
+<div id="submit">
+   <button id="getrec">GET RECOMMENDATIONS</button>
+</div>
+<div id="lastdiv">
+<span><ul class="pagination">  
+  <li><a class="active" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F1FBlWqaQltlaZ538_pXnfF0GFg6Ohrw74chUX-hgi9G8%2Fedit%3Ffbclid%3DIwAR21rveaA4GDwfHzPtL_yZIhJHXaP2iAXdq8CfZKgb-Bx4khArl0xEWGPk8%23slide%3Did.g35f391192_04&h=AT0uYCpGHDMnzncpLql6wyfCBVd08cSWjkrVWSfmmNLoYfKXfzd2dt56JR29pA6YasiRgZunW7nm0oDcdBf96kIPa6SUIT8WyXr6HGNecfRzc8Zm2_eU1wdu0bDwtDTD3njhKw"><b>ABOUT THE PROJECT</b></a></li>  
+  <li><a href="academics.html"><b>TEAM MEMBERS</b></a></li>  
+</ul> 
+</span>
+</div>
+</body>
+</html>
